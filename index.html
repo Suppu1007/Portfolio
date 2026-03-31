@@ -64,22 +64,22 @@
             </section>
 
             <section class="page" style="flex: 1.5; padding: 2rem;">
-                <div class="chat-container glass-card" style="height: 100%; display: flex; flex-direction: column; background: rgba(0,0,0,0.3); border-radius: 16px; border: 1px solid var(--color-glass-border); overflow: hidden;">
+                <div class="chat-container" style="height: 100%; display: flex; flex-direction: column; background: #fff; border-radius: 16px; border: 1px solid var(--color-border); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                     
-                    <div style="padding: 1rem; border-bottom: 1px solid var(--color-glass-border); background: rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
-                        <div style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div>
-                        <span style="font-size: 0.85rem; font-weight: 600;">Supriya-GPT (Online)</span>
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--color-border); background: #fbf9f6; display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 5px #10b981;"></div>
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-primary);">Supriya-GPT (Online)</span>
                     </div>
 
                     <div id="chatWindow" style="flex: 1; padding: 1.5rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem;">
-                        <div class="chat-msg ai" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56,189,248,0.2); padding: 12px 16px; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.9rem;">
+                        <div class="chat-msg ai" style="align-self: flex-start; background: #f4f1ec; border: 1px solid var(--color-border); padding: 12px 16px; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.9rem; color: var(--color-text-primary);">
                             Hello! I am Supriya's AI clone. How can I help you learn about her Data Science profile?
                         </div>
                     </div>
 
-                    <div style="padding: 1rem; border-top: 1px solid var(--color-glass-border); background: rgba(255,255,255,0.02);">
+                    <div style="padding: 1rem; border-top: 1px solid var(--color-border); background: #fbf9f6;">
                         <form id="aiForm" style="display: flex; gap: 10px;">
-                            <input type="text" id="aiInput" class="form-control" placeholder="Ask me anything..." required style="background: rgba(0,0,0,0.5); border: 1px solid var(--color-glass-border);">
+                            <input type="text" id="aiInput" class="form-control" placeholder="Ask me anything..." required style="background: #fff; border: 1px solid var(--color-border); color: var(--color-text-primary);">
                             <button type="submit" class="btn" style="padding: 10px 20px;">Send</button>
                         </form>
                     </div>
@@ -402,7 +402,7 @@
 
             // Render User Msg
             chatWindow.innerHTML += `
-                <div class="chat-msg user" style="align-self: flex-end; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.1); padding: 12px 16px; border-radius: 12px 12px 0 12px; max-width: 85%; font-size: 0.9rem;">
+                <div class="chat-msg user" style="align-self: flex-end; background: var(--color-accent); color: #fff; border: 1px solid var(--color-accent); padding: 12px 16px; border-radius: 12px 12px 0 12px; max-width: 85%; font-size: 0.9rem;">
                     ${query}
                 </div>
             `;
@@ -412,7 +412,7 @@
             // Render Thinking state
             const id = 'msg-' + Date.now();
             chatWindow.innerHTML += `
-                <div id="${id}" class="chat-msg ai" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56,189,248,0.2); padding: 12px 16px; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.9rem; opacity: 0.5;">
+                <div id="${id}" class="chat-msg ai" style="align-self: flex-start; background: #f4f1ec; border: 1px solid var(--color-border); padding: 12px 16px; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.9rem; opacity: 0.7; color: var(--color-text-primary);">
                     Analyzing query...
                 </div>
             `;
