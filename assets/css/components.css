@@ -1,0 +1,115 @@
+/* 
+   assets/css/components.css
+   Cards, buttons, images, lists, placeholders
+*/
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid var(--color-text-primary);
+    background: transparent;
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--color-text-primary);
+    color: var(--color-paper);
+}
+
+/* Image blocks */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #d1cbc1; /* Neutral default */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Specialized image sizes */
+.img-hero {
+    /* Set specific image or placeholder */
+    background-image: url('https://images.unsplash.com/photo-1615397323214-411bd0316e6d?q=80&w=800&auto=format&fit=crop');
+}
+
+.img-profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 320px;
+    z-index: 10;
+    background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop');
+}
+
+/* Lists styling specific to the design */
+.list-clean {
+    list-style: none;
+}
+
+.list-clean li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.list-flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-xs);
+}
+
+/* Definition lists for experience etc */
+.dl-row {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+.dl-row dt {
+    font-weight: 600;
+    min-width: 100px;
+}
+
+/* TOC specific components */
+.toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid transparent;
+}
+
+.toc-number {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.toc-item h4 {
+    margin-bottom: 0.2rem;
+}
+
+.toc-item p {
+    font-size: 0.85rem;
+    max-width: 280px;
+}
+
+/* Cards (Project feature) */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.project-card .img-wrap {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: var(--color-border);
+}

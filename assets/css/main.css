@@ -1,0 +1,108 @@
+/* 
+   assets/css/main.css
+   Core CSS Variables, Typography, and Resets 
+*/
+
+:root {
+    /* Color Palette derived from the provided image */
+    --color-bg-page: #d4cfc7;       /* The dark beige background of the full screen */
+    --color-paper: #f4f1ec;         /* The slightly warm white of the paper pages */
+    --color-text-primary: #111111;  /* Very dark grey/black for text */
+    --color-text-secondary: #555555;/* Subtle grey for smaller text */
+    --color-accent: #bc9c82;        /* Subtle warm accent color */
+    --color-border: #dddddd;        /* Light grey for subtle borders */
+    
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    
+    /* Spacing System */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Classes & Element base styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+.text-small {
+    font-size: 0.8rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.font-sans {
+    font-family: var(--font-sans);
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+/* Utilities */
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+
+.opacity-70 { opacity: 0.7; }
