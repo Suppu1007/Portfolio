@@ -1,35 +1,25 @@
 /* 
    assets/css/layout.css
-   Glassmorphism Grid, navbar, sections, page containers
+   Grid, navbar, sections, page containers
 */
 
+/* Main wrapper that centers the "magazine" within the beige background */
 .portfolio-wrapper {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
 }
 
-/* Glassmorphism Spread (Cards) */
+/* A single "book spread" block holding one or two pages */
 .spread {
     display: flex;
     flex-direction: row;
-    background: var(--color-glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--color-glass-border);
-    border-radius: 24px;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    background-color: var(--color-paper);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08); /* Soft elevated shadow */
     width: 100%;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.spread:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6), 0 0 20px rgba(56,189,248,0.1);
 }
 
 /* Individual page inside a spread */
@@ -39,31 +29,25 @@
     padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
+    min-height: 800px;
 }
 
-/* Separator between connected pages */
+/* Add a line simulating binding between pages in a dual-spread */
 .spread .page + .page {
-    border-left: 1px solid var(--color-glass-border);
+    border-left: 1px solid var(--color-border);
 }
 
-/* Navbar */
+/* Navbar styling injected from components/navbar.html */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-md) var(--spacing-lg);
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--color-glass-border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-brand a {
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 2px;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .nav-links {
@@ -72,48 +56,32 @@
     gap: var(--spacing-md);
 }
 
-.nav-links a {
-    color: var(--color-text-secondary);
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.nav-links a:hover {
-    color: var(--color-accent);
-}
-
-/* Footer */
+/* Footer styling injected from components/footer.html */
 .site-footer {
     padding: var(--spacing-md) var(--spacing-lg);
-    border-top: 1px solid var(--color-glass-border);
-    margin-top: var(--spacing-xl);
-    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    justify-content: space-between;
     align-items: center;
 }
 
 .footer-brand {
     display: flex;
     gap: var(--spacing-md);
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Section specific layouts */
+/* Hero */
 .hero-spread {
-    text-align: center;
-    padding: 6rem 2rem;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-header {
@@ -121,12 +89,18 @@
     justify-content: space-between;
     text-transform: uppercase;
     font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-secondary);
+    font-weight: 500;
     margin-bottom: var(--spacing-md);
-    width: 100%;
 }
 
+.hero-image-wrap {
+    flex-grow: 1;
+    margin: var(--spacing-md) 0;
+    width: 100%;
+    min-height: 400px;
+}
+
+/* Grid splits within a page */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
