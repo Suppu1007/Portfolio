@@ -44,6 +44,30 @@
             </section>
         </div>
 
+        <!-- Spread 1.5: Metrics Dashboard -->
+        <div class="spread mt-lg mb-lg" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background: #fbf9f6;">
+            <section class="page" style="border: none; padding: 4rem 2rem;">
+                <div style="display: flex; justify-content: center; gap: clamp(2rem, 5vw, 6rem); flex-wrap: wrap; text-align: center;">
+                    <div>
+                        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--color-accent); margin-bottom: 0.5rem; font-family: var(--font-serif);">5+</h2>
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; color: var(--color-text-secondary);">Projects Built</span>
+                    </div>
+                    <div>
+                        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--color-accent); margin-bottom: 0.5rem; font-family: var(--font-serif);">10+</h2>
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; color: var(--color-text-secondary);">Models Trained</span>
+                    </div>
+                    <div>
+                        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--color-accent); margin-bottom: 0.5rem; font-family: var(--font-serif);">15+</h2>
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; color: var(--color-text-secondary);">Technologies</span>
+                    </div>
+                    <div>
+                        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--color-accent); margin-bottom: 0.5rem; font-family: var(--font-serif);">2</h2>
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; color: var(--color-text-secondary);">Core Domains</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
 
 
         <!-- Spread 3: Quick Profile & Links -->
@@ -177,6 +201,18 @@
                             <span class="badge">MongoDB</span>
                             <span class="badge">Docker</span>
                             <span class="badge">Grad-CAM</span>
+                        </div>
+
+                        <!-- Architecture System Flow -->
+                        <div style="background: #fbf9f6; border: 1px solid var(--color-border); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; text-align: center;">
+                            <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-secondary); margin-bottom: 15px;">System Architecture Flow</h4>
+                            <div style="font-family: monospace; font-size: 0.9rem; font-weight: bold; color: var(--color-accent); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
+                                <span>User Upload</span> <span style="color: #ccc;">➔</span>
+                                <span>FastAPI</span> <span style="color: #ccc;">➔</span>
+                                <span>BioBERT + ResNet</span> <span style="color: #ccc;">➔</span>
+                                <span>Grad-CAM Explainer</span> <span style="color: #ccc;">➔</span>
+                                <span>Clinical Output</span>
+                            </div>
                         </div>
 
                         <div style="display: flex; gap: 15px;">
