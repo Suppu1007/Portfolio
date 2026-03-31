@@ -113,3 +113,36 @@
     aspect-ratio: 4/5;
     background-color: var(--color-border);
 }
+
+/* Form styling */
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    background-color: transparent;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-text-primary);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.form-status {
+    text-align: center;
+    min-height: 20px;
+}
+

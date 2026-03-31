@@ -15,18 +15,18 @@
 
     <main class="portfolio-wrapper">
         <div class="spread">
-            <section class="page hero-spread" style="text-align: center;">
+            <section class="page" style="flex: 1; border-right: 1px solid var(--color-border);">
                 <header class="hero-header">
                     <span>Let's Talk</span>
                 </header>
                 
                 <h2 class="mb-md mt-xl">GET IN TOUCH</h2>
                 
-                <p class="mb-lg" style="max-width: 500px; margin: 0 auto 4rem auto;">
-                    I'm currently looking for full-time opportunities in Data Science, Machine Learning, and AI Systems Engineering. Feel free to reach out via email or LinkedIn!
+                <p class="mb-lg" style="max-width: 400px; margin-bottom: 2rem;">
+                    I'm currently looking for full-time opportunities in Data Science, Machine Learning, and AI Systems Engineering. Feel free to reach out via the form or directly at my email.
                 </p>
                 
-                <div class="mb-lg" style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2rem);">
+                <div class="mb-lg" style="font-family: var(--font-serif); font-size: clamp(1.2rem, 2vw, 1.5rem);">
                     <a href="mailto:mathyamsupriya@gmail.com" style="text-decoration: underline;">mathyamsupriya@gmail.com</a>
                 </div>
 
@@ -35,15 +35,80 @@
                     <p>Location: Tirupati, Andhra Pradesh</p>
                 </div>
                 
-                <ul class="list-clean list-flex-row" style="max-width: 300px; margin: 0 auto; border: none; font-size: 0.8rem; font-family: var(--font-sans); text-transform: uppercase;">
+                <ul class="list-clean list-flex-row" style="max-width: 300px; border: none; font-size: 0.8rem; font-family: var(--font-sans); text-transform: uppercase;">
                     <li><a href="https://linkedin.com">LinkedIn</a></li>
                     <li><a href="https://github.com">GitHub</a></li>
                 </ul>
+            </section>
+            
+            <section class="page" style="flex: 1;">
+                <div style="max-width: 500px; margin: 0 auto; width: 100%; padding-top: 5rem;">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group mb-md">
+                            <label for="name" class="text-small text-uppercase">Name</label>
+                            <input type="text" id="name" name="name" required class="form-control" placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group mb-md">
+                            <label for="email" class="text-small text-uppercase">Email</label>
+                            <input type="email" id="email" name="email" required class="form-control" placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group mb-md">
+                            <label for="message" class="text-small text-uppercase">Message</label>
+                            <textarea id="message" name="message" required class="form-control" rows="5" placeholder="How can we collaborate?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn w-100" id="submitBtn">Send Message ➔</button>
+                        
+                        <div id="formStatus" class="form-status mt-md text-small"></div>
+                    </form>
+                </div>
             </section>
         </div>
     </main>
 
     <div id="footer-placeholder"></div>
     <script src="/assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const statusNode = document.getElementById('formStatus');
+            const form = e.target;
+            
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            statusNode.innerHTML = '';
+            
+            const payload = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+            
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    statusNode.innerHTML = `<span style="color: #2e7d32;">✔ ${data.message}</span>`;
+                    form.reset();
+                } else {
+                    statusNode.innerHTML = `<span style="color: #c62828;">✖ ${data.error || 'Something went wrong.'}</span>`;
+                }
+            } catch (err) {
+                statusNode.innerHTML = `<span style="color: #c62828;">✖ Connection error. Try again later.</span>`;
+            } finally {
+                btn.textContent = 'Send Message ➔';
+                btn.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>
