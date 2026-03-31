@@ -15,57 +15,106 @@
 
     <main class="portfolio-wrapper">
         <div class="spread">
-            <section class="page" style="flex: 2;">
+            <section class="page">
                 <header class="hero-header">
-                    <span>Medical AI</span>
-                    <span>Dec 2025 – Present</span>
+                    <span>Medical AI Pipeline</span>
+                    <span>Dec 2025</span>
                 </header>
                 
-                <h2 class="mb-lg" style="font-size: clamp(2rem, 4vw, 3rem);">MEDIEXPLAIN: EXPLAINABLE MEDICAL AI</h2>
+                <h2 class="mb-lg">MEDIEXPLAIN: EXPLAINABLE MEDICAL AI</h2>
                 
-                <div style="display: flex; gap: var(--spacing-lg); max-width: 900px; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <div class="image-placeholder" style="height: 400px; background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop');"></div>
+                <div style="display: flex; gap: var(--spacing-lg); flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 350px;">
+                        <div class="image-placeholder" style="height: 300px; background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop');"></div>
+                        <div class="image-placeholder" style="height: 200px; margin-top: 20px; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; border: 1px dashed var(--color-accent);">
+                            <span class="text-small" style="color: var(--color-accent);">[Architecture Diagram Placeholder]</span>
+                        </div>
                     </div>
-                    <div style="flex: 1; min-width: 300px;">
+                    <div style="flex: 1; min-width: 350px;">
                         <h3>Description</h3>
-                        <p class="mb-md">Built an explainable medical AI system combining NLP, computer vision, and Retrieval-Augmented Generation (RAG) to interpret clinical reports and medical imaging. Developed a Clinical Decision Support System with explainability and audit logging for safe healthcare AI deployment.</p>
+                        <p class="mb-md">Built an explainable medical AI system combining NLP, computer vision, and Retrieval-Augmented Generation (RAG) to interpret clinical reports and medical imaging. Developed a Clinical Decision Support System with explainability layers (Grad-CAM, SHAP) and secure audit logging for safe healthcare AI deployment.</p>
                         
-                        <div class="dl-row text-small mb-sm">
-                            <dt>Tech Stack:</dt>
-                            <dd>Python, FastAPI, BioBERT, ResNet-50, LLM (RAG), Grad-CAM, SHAP, MongoDB, Docker</dd>
+                        <h3 class="mt-lg">Tech Stack</h3>
+                        <div class="badge-container mb-lg">
+                            <span class="badge">Python</span>
+                            <span class="badge">FastAPI</span>
+                            <span class="badge">BioBERT</span>
+                            <span class="badge">ResNet-50</span>
+                            <span class="badge">RAG</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">Docker</span>
+                            <span class="badge">Grad-CAM</span>
+                        </div>
+
+                        <div style="display: flex; gap: 15px;">
+                            <a href="https://github.com/Suppu1007/MediExplain" target="_blank" class="btn">GitHub Repo ➔</a>
+                            <a href="#" class="btn" style="background: transparent; border-color: var(--color-text-secondary); color: var(--color-text-secondary);">Live Demo</a>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section class="page" style="flex: 1.5;">
+        </div>
+        
+        <div class="spread">
+            <section class="page">
                 <header class="hero-header">
-                    <span>Logistics Automation</span>
+                    <span>Logistics Automation Ecosystem</span>
                     <span>Nov 2025</span>
                 </header>
-                <h2 class="mb-lg" style="font-size: clamp(2rem, 3vw, 2.5rem);">SCMLITE</h2>
-                <div class="image-placeholder" style="height: 250px; background-image: url('https://images.unsplash.com/photo-1586528116311-ad8ed7c82631?q=80&w=800&auto=format&fit=crop'); margin-bottom: var(--spacing-md);"></div>
-                <p class="mb-sm">Developed a full-stack smart supply chain system enabling real-time shipment tracking and logistics automation. Integrated Kafka-based event streaming and designed secure REST APIs.</p>
-                <div class="dl-row text-small">
-                    <dt>Tech Stack:</dt>
-                    <dd>Python, FastAPI, Kafka, MongoDB, Docker</dd>
+                <h2 class="mb-md">SCMLITE: SMART SUPPLY CHAIN</h2>
+                
+                <div class="grid-2">
+                    <div>
+                        <p class="mb-sm">Developed a full-stack smart supply chain system enabling real-time shipment tracking and logistics automation. Integrated robust event streaming pipelines to process sensor metrics globally.</p>
+                        
+                        <h3 class="mt-lg">Tech Stack</h3>
+                        <div class="badge-container mb-lg">
+                            <span class="badge">Python</span>
+                            <span class="badge">FastAPI</span>
+                            <span class="badge">Kafka</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">Docker</span>
+                            <span class="badge">React</span>
+                        </div>
+                        
+                        <div style="display: flex; gap: 15px;">
+                            <a href="https://github.com/Suppu1007/SCMLite" target="_blank" class="btn">GitHub Repo ➔</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image-placeholder" style="height: 100%; min-height: 250px; background-image: url('https://images.unsplash.com/photo-1586528116311-ad8ed7c82631?q=80&w=800&auto=format&fit=crop');"></div>
+                    </div>
                 </div>
             </section>
         </div>
 
-        <div class="spread mt-lg">
+        <div class="spread">
             <section class="page">
                 <header class="hero-header">
-                    <span>Predictive Risk Assessment</span>
-                    <span>Jan 2023 – May 2023</span>
+                    <span>Predictive Risk Assessment Models</span>
+                    <span>Jan 2023</span>
                 </header>
-                <h2 class="mb-lg" style="font-size: clamp(2rem, 4vw, 3rem);">SMART HEALTH PREDICTION</h2>
-                <div style="max-width: 800px;">
-                    <p class="mb-md">Designed an ML-based platform for predictive risk assessment of critical health conditions. Trained supervised learning models and deployed real-time prediction APIs.</p>
-                    <div class="dl-row text-small">
-                        <dt>Tech Stack:</dt>
-                        <dd>Python, Flask, Scikit-learn, TensorFlow/Keras, XGBoost, Pandas, MongoDB</dd>
+                <h2 class="mb-md">SMART HEALTH PREDICTION</h2>
+                <div class="grid-2">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <p class="mb-md">Designed an ML-based platform for predictive risk assessment of critical health conditions. Trained highly-tuned supervised learning models (XGBoost) and deployed real-time inference APIs serving clinical dashboards.</p>
+                        
+                        <h3 class="mt-md">Tech Stack</h3>
+                        <div class="badge-container mb-lg">
+                            <span class="badge">Python</span>
+                            <span class="badge">Flask</span>
+                            <span class="badge">Scikit-learn</span>
+                            <span class="badge">TensorFlow/Keras</span>
+                            <span class="badge">XGBoost</span>
+                            <span class="badge">Pandas</span>
+                        </div>
+                        
+                        <div>
+                            <a href="#" class="btn">View Paper ➔</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image-placeholder" style="height: 100%; min-height: 300px; background-image: url('https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=800&auto=format&fit=crop');"></div>
                     </div>
                 </div>
             </section>

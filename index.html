@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathyam Supriya | Showcase</title>
+    <title>Mathyam Supriya | AI Portfolio</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link rel="stylesheet" href="/assets/css/components.css">
@@ -15,75 +15,93 @@
 
     <main class="portfolio-wrapper">
         
-        <!-- Spread 1: Cover and Intro -->
+        <!-- Spread 1: Hero -->
         <div class="spread">
             <section class="page hero-spread">
-                <header class="hero-header">
-                    <span>MATHYAM SUPRIYA</span>
-                    <span>DATA SCIENTIST</span>
+                <header class="hero-header" style="justify-content: center;">
+                    <span style="color: var(--color-accent); letter-spacing: 3px;">MATHYAM SUPRIYA</span>
                 </header>
                 
-                <div class="hero-image-wrap img-hero" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop');"></div>
-                
-                <div class="hero-text mb-md">
-                    <p class="font-sans text-small text-uppercase mb-sm">/AI Portfolio</p>
-                    <h1>DATA SCIENCE & ML</h1>
+                <div class="hero-text mt-xl mb-lg">
+                    <h1>FULLSTACK<br><span style="color: var(--color-accent);">AI ENGINEER</span></h1>
+                    <p class="mt-md" style="max-width: 600px; margin: 2rem auto; font-size: 1.1rem;">
+                        Building scalable predictive models, explainable medical AI systems, and automated data pipelines.
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                        <a href="#ai-demo" class="btn">Try My AI Bot ➔</a>
+                        <a href="/pages/projects.html" class="btn" style="background: transparent; border-color: rgba(255,255,255,0.2);">View Work</a>
+                    </div>
+                </div>
+
+                <div class="mt-lg" style="width: 100%; display: flex; justify-content: space-around; opacity: 0.6; font-size: 0.8rem; text-transform: uppercase;">
+                    <span>FastAPI</span>
+                    <span>TensorFlow</span>
+                    <span>RAG & LLMs</span>
+                    <span>Kafka</span>
+                    <span>Python</span>
                 </div>
             </section>
         </div>
 
-        <!-- Spread 2: About Me and TOC -->
-        <div class="spread">
-            <section class="page">
+        <!-- Spread 2: Interative AI Demo -->
+        <div class="spread" id="ai-demo">
+            <section class="page" style="flex: 1; border-right: 1px solid var(--color-glass-border);">
                 <header class="hero-header">
-                    <span>Introduction / Profile</span>
+                    <span>Live Showcase</span>
                 </header>
+                <h2 class="mb-md">CHAT WITH MY AI</h2>
+                <p class="mb-lg">
+                    Experience my tech stack in real-time. This is a simulated RAG-based AI assistant trained exclusively on my resume and project history. Ask it about my experience!
+                </p>
                 
-                <h2 class="mb-lg" style="position: relative; z-index: 20;">About Me</h2>
-                
-                <div style="max-width: 80%; padding-top: 2rem;">
-                    <p class="mb-md">
-                        I am a Data Science graduate with strong expertise in machine learning, statistical analysis, and fullstack AI systems. I specialize in building predictive models, explainable AI solutions, and scalable backend APIs.
-                    </p>
-                    <a href="/pages/about.html" class="btn">Read Full Profile ➔</a>
-                </div>
+                <ul class="list-clean mb-lg text-small">
+                    <li style="color: var(--color-accent);">Try asking:</li>
+                    <li>"What did you build for MedExplain?"</li>
+                    <li>"What is your tech stack?"</li>
+                    <li>"Do you have experience with Kafka?"</li>
+                </ul>
             </section>
 
-            <section class="page">
-                <header class="hero-header">
-                    <span></span>
-                    <span>AI & ML Portfolio</span>
-                </header>
-                
-                <h3 class="mb-sm opacity-70" style="border-bottom: none">/TABLE OF</h3>
-                <h2 class="mb-lg">CONTENTS</h2>
-                
-                <ul class="list-clean">
-                    <li class="toc-item">
-                        <div>
-                            <h4>Introduction/Resume</h4>
-                            <p>Overview of experience and skillset.</p>
+            <section class="page" style="flex: 1.5; padding: 2rem;">
+                <div class="chat-container glass-card" style="height: 100%; display: flex; flex-direction: column; background: rgba(0,0,0,0.3); border-radius: 16px; border: 1px solid var(--color-glass-border); overflow: hidden;">
+                    
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--color-glass-border); background: rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div>
+                        <span style="font-size: 0.85rem; font-weight: 600;">Supriya-GPT (Online)</span>
+                    </div>
+
+                    <div id="chatWindow" style="flex: 1; padding: 1.5rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="chat-msg ai" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56,189,248,0.2); padding: 12px 16px; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.9rem;">
+                            Hello! I am Supriya's AI clone. How can I help you learn about her Data Science profile?
                         </div>
-                        <span class="toc-number">01</span>
-                    </li>
-                    <li class="toc-item">
-                        <div>
-                            <h4>Selected Projects</h4>
-                            <p>Explainable Medical AI, Supply Chain Analytics, and Health Prediction.</p>
-                        </div>
-                        <span class="toc-number">03</span>
-                    </li>
-                    <li class="toc-item">
-                        <div>
-                            <h4>Publications</h4>
-                            <p>Auto Skill Navigator Research (Aug 2025).</p>
-                        </div>
-                        <span class="toc-number">05</span>
-                    </li>
-                </ul>
-                
-                <div style="margin-top: auto; padding-top: 4rem;">
-                    <a href="/pages/projects.html" class="btn">View Projects ➔</a>
+                    </div>
+
+                    <div style="padding: 1rem; border-top: 1px solid var(--color-glass-border); background: rgba(255,255,255,0.02);">
+                        <form id="aiForm" style="display: flex; gap: 10px;">
+                            <input type="text" id="aiInput" class="form-control" placeholder="Ask me anything..." required style="background: rgba(0,0,0,0.5); border: 1px solid var(--color-glass-border);">
+                            <button type="submit" class="btn" style="padding: 10px 20px;">Send</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Spread 3: Quick Profile & Links -->
+        <div class="spread mt-lg">
+            <section class="page" style="text-align: center; max-width: 800px; margin: 0 auto; border: none;">
+                <h2 class="mb-md">Profile Summary</h2>
+                <div class="badge-container mb-md" style="justify-content: center;">
+                    <span class="badge">MS Data Science</span>
+                    <span class="badge">B.Tech CSE</span>
+                    <span class="badge">Problem Solver</span>
+                </div>
+                <p class="mb-lg">
+                    I specialize in end-to-end Machine Learning pipelines, from Exploratory Data Analysis to deploying highly scalable FastAPI backends wrapped in Docker. My passion lies in transforming raw data streams into explainable, actionable intelligence.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="/pages/about.html" class="btn">Full Biography</a>
+                    <a href="/pages/resume.html" class="btn" style="background: transparent; border-color: var(--color-text-secondary);">Resume</a>
                 </div>
             </section>
         </div>
@@ -93,5 +111,53 @@
     <div id="footer-placeholder"></div>
 
     <script src="/assets/js/main.js"></script>
+    <script>
+        // AI Chatbot Demo Logic
+        document.getElementById('aiForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = document.getElementById('aiInput');
+            const chatWindow = document.getElementById('chatWindow');
+            const query = input.value.trim();
+            if(!query) return;
+
+            // Render User Msg
+            chatWindow.innerHTML += `
+                <div class="chat-msg user" style="align-self: flex-end; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.1); padding: 12px 16px; border-radius: 12px 12px 0 12px; max-width: 85%; font-size: 0.9rem;">
+                    ${query}
+                </div>
+            `;
+            input.value = '';
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Render Thinking state
+            const id = 'msg-' + Date.now();
+            chatWindow.innerHTML += `
+                <div id="${id}" class="chat-msg ai" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56,189,248,0.2); padding: 12px 16px; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.9rem; opacity: 0.5;">
+                    Analyzing query...
+                </div>
+            `;
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Simple Pattern Matching Backend Mock
+            setTimeout(() => {
+                let response = "I'm a simulated demo bot! Mathyam Supriya built me. She specializes in Python, FastAPI, Machine Learning, and explainable AI pipelines!";
+                const qLower = query.toLowerCase();
+                
+                if(qLower.includes('medexplain')) {
+                    response = "For MedExplain, Supriya built an explainable medical AI system combining NLP (BioBERT), computer vision (ResNet-50), and RAG to interpret clinical reports! It includes Grad-CAM and SHAP for explainability.";
+                } else if(qLower.includes('tech stack') || qLower.includes('skills')) {
+                    response = "Her core stack includes Python, FastAPI, Docker, MongoDB, Kafka, Scikit-learn, XGBoost, and TensorFlow/Keras for Deep Learning. She frequently deploys on AWS and GCP.";
+                } else if(qLower.includes('kafka') || qLower.includes('supply') || qLower.includes('scm')) {
+                    response = "Yes! In SCMLite, she integrated Kafka-based event streaming to process high-throughput logistics metrics and coupled it with secure FastAPI REST routes.";
+                } else if(qLower.includes('contact') || qLower.includes('hire')) {
+                    response = "You can reach her at <strong>mathyamsupriya@gmail.com</strong> through the Contact page! She's currently seeking full-time AI Engineering roles.";
+                }
+
+                document.getElementById(id).innerHTML = response;
+                document.getElementById(id).style.opacity = '1';
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            }, 1200);
+        });
+    </script>
 </body>
 </html>

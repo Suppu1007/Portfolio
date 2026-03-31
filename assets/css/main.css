@@ -1,19 +1,20 @@
 /* 
    assets/css/main.css
-   Core CSS Variables, Typography, and Resets 
+   Core CSS Variables, Typography, and Gradient Animations
 */
 
 :root {
-    /* Color Palette derived from the provided image */
-    --color-bg-page: #d4cfc7;       /* The dark beige background of the full screen */
-    --color-paper: #f4f1ec;         /* The slightly warm white of the paper pages */
-    --color-text-primary: #111111;  /* Very dark grey/black for text */
-    --color-text-secondary: #555555;/* Subtle grey for smaller text */
-    --color-accent: #bc9c82;        /* Subtle warm accent color */
-    --color-border: #dddddd;        /* Light grey for subtle borders */
+    /* Advanced AI Dark/Glassmorphism Theme */
+    --color-bg-base: #0f172a;       /* Deep slate background */
+    --color-glass-bg: rgba(30, 41, 59, 0.7); /* Semi-transparent slate for cards */
+    --color-glass-border: rgba(255, 255, 255, 0.08); 
+    --color-text-primary: #f8fafc;  /* Bright white text */
+    --color-text-secondary: #94a3b8;/* Muted slate text */
+    --color-accent: #38bdf8;        /* Sky blue AI accent */
+    --color-accent-glow: rgba(56, 189, 248, 0.5);
     
     /* Typography */
-    --font-serif: 'Playfair Display', serif;
+    --font-serif: 'Playfair Display', serif; /* Keeping for elegance */
     --font-sans: 'Inter', sans-serif;
     
     /* Spacing System */
@@ -32,39 +33,50 @@
 }
 
 body {
-    background-color: var(--color-bg-page);
+    background-color: var(--color-bg-base);
     color: var(--color-text-primary);
     font-family: var(--font-sans);
     line-height: 1.6;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    
+    /* Mesh Gradient Background */
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.1), transparent 30%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 /* Typography Classes & Element base styles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
-    font-weight: 400;
+    font-family: var(--font-sans); /* Switched mostly to Inter for tech vibe, but keep serif classes available */
+    font-weight: 600;
     color: var(--color-text-primary);
 }
 
 h1 {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3rem, 8vw, 5.5rem);
     letter-spacing: -2px;
     line-height: 1.1;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     letter-spacing: -1px;
     line-height: 1.2;
 }
 
 h3 {
-    font-family: var(--font-sans);
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--color-accent);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -74,35 +86,23 @@ p {
 }
 
 a {
-    color: var(--color-text-primary);
+    color: var(--color-accent);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    color: var(--color-accent);
+    color: #fff;
+    text-shadow: 0 0 10px var(--color-accent-glow);
 }
 
-.text-small {
-    font-size: 0.8rem;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.font-sans {
-    font-family: var(--font-sans);
-}
-
-.font-serif {
-    font-family: var(--font-serif);
-}
+.text-small { font-size: 0.85rem; }
+.text-uppercase { text-transform: uppercase; letter-spacing: 1px; }
 
 /* Utilities */
 .mb-sm { margin-bottom: var(--spacing-sm); }
 .mb-md { margin-bottom: var(--spacing-md); }
 .mb-lg { margin-bottom: var(--spacing-lg); }
-
+.mt-xl { margin-top: var(--spacing-xl); }
+.mt-lg { margin-top: var(--spacing-lg); }
 .opacity-70 { opacity: 0.7; }
