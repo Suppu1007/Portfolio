@@ -70,66 +70,38 @@
 <div id="about" style="scroll-margin-top: 100px;"></div>
 
         <div class="spread">
-            <section class="page">
-                <header class="hero-header">
-                    <span>Introduction / Profile</span>
+            <section class="page" style="text-align: center; border: none; padding: 4rem 2rem;">
+                <header class="hero-header" style="justify-content: center;">
+                    <span>Technical Stack</span>
                 </header>
                 
-                <h2 class="mb-lg" style="position: relative; z-index: 20;">ABOUT ME</h2>
+                <h2 class="mb-lg" style="position: relative; z-index: 20;">EXPERTISE & SKILLS</h2>
                 
-                <div class="grid-2">
-                    <div>
-                        <h3>Contact Info</h3>
-                        <ul class="list-clean mb-md text-small">
-                            <li><strong>Phone:</strong> +91 9182413014</li>
-                            <li><strong>Location:</strong> Tirupati, Andhra Pradesh</li>
-                            <li><strong>Email:</strong> mathyamsupriya@gmail.com</li>
-                        </ul>
-                        
-                        <h3>Professional Summary</h3>
-                        <p class="text-small" style="line-height: 1.7;">
-                            <strong>I am an AI Systems Engineer and Data Scientist</strong> specializing in architecting end-to-end machine learning pipelines. My expertise bridges the gap between deep learning research and scalable production backends. I excel at building predictive models, Retrieval-Augmented Generation (RAG) architectures, and robust data ecosystems utilizing Python, FastAPI, and cutting-edge MLOps practices. I am a highly analytical problem-solver passionate about transforming complex data streams into explainable, actionable intelligence.
-                        </p>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 2.5rem; max-width: 800px; margin: 0 auto;">
+                    
+                    <!-- Programming & Backend -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: center;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="60" height="60" title="Python" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" width="60" height="60" title="FastAPI" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" width="60" height="60" title="MongoDB" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="60" height="60" title="SQL" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"/>
                     </div>
-                    <div>
-                        <h3>Skills & Tools</h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: var(--spacing-md);">
-                            
-                            <!-- Programming & Backend -->
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="35" height="35" title="Python" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" width="35" height="35" title="FastAPI" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" width="35" height="35" title="MongoDB" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="35" height="35" title="SQL" />
-                            
-                            <!-- Data & ML -->
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" width="35" height="35" title="Pandas" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" width="35" height="35" title="NumPy" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" width="35" height="35" title="Scikit-Learn" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" width="35" height="35" title="TensorFlow" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" width="35" height="35" title="Keras" />
-                            
-                            <!-- DevOps & Cloud -->
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" width="35" height="35" title="Docker" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" width="35" height="35" title="Kafka" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="45" height="35" title="AWS" />
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="35" height="35" title="GCP" />
-                        </div>
-                        
-                        <h3>Education</h3>
-                        <dl class="text-small mb-md">
-                            <div class="dl-row">
-                                <dt>2024—2026</dt>
-                                <dd>MS in Data Science<br><em>SV University</em></dd>
-                            </div>
-                            <div class="dl-row">
-                                <dt>2019—2023</dt>
-                                <dd>B.Tech CSE<br><em>SV College of Engineering</em></dd>
-                            </div>
-                        </dl>
-                        
-                        <div style="margin-top: 2rem;">
-                            <a href="/pages/resume.html" class="btn">View Full Resume ➔</a>
-                        </div>
+                    
+                    <!-- Data & ML -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: center;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" width="60" height="60" title="Pandas" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" width="60" height="60" title="NumPy" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" width="60" height="60" title="Scikit-Learn" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" width="60" height="60" title="TensorFlow" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" width="60" height="60" title="Keras" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                    </div>
+                    
+                    <!-- DevOps & Cloud -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: center;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" width="60" height="60" title="Docker" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" width="60" height="60" title="Kafka" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="80" height="60" title="AWS" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="60" height="60" title="GCP" style="transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" />
                     </div>
                 </div>
             </section>
