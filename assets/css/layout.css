@@ -13,12 +13,9 @@
     gap: var(--spacing-lg);
 }
 
-/* A single "book spread" block holding one or two pages */
 .spread {
     display: flex;
     flex-direction: row;
-    background-color: var(--color-paper);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08); /* Soft elevated shadow */
     width: 100%;
 }
 
@@ -29,12 +26,11 @@
     padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
-    min-height: 800px;
 }
 
 /* Add a line simulating binding between pages in a dual-spread */
 .spread .page + .page {
-    border-left: 1px solid var(--color-border);
+    border-left: none;
 }
 
 /* Navbar styling injected from components/navbar.html */
