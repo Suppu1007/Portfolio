@@ -32,8 +32,35 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: 'Portfolio Contact <onboarding@resend.dev>', // Sender
         to: 'mathyamsupriya@gmail.com', // Receiver: You
-        subject: `New Portfolio Message from ${name}`,
-        html: `<p><strong>From:</strong> ${name} (${email})</p><p><strong>Message:</strong><br/>${message}</p>`
+        subject: `New Contact from ${name}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; padding: 30px; background-color: #fafafa; border-radius: 8px;">
+            <h2 style="color: #111; margin-bottom: 20px; font-family: 'Playfair Display', serif;">📩 New Portfolio Contact Request</h2>
+            
+            <table style="width: 100%; max-width: 600px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin: 0 auto;">
+              <tr>
+                <td style="padding-bottom: 15px; width: 80px; color: #555;"><strong>Name:</strong></td>
+                <td style="padding-bottom: 15px; color: #111;">${name}</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 15px; color: #555;"><strong>Email:</strong></td>
+                <td style="padding-bottom: 15px;"><a href="mailto:${email}" style="color: #bc9c82; text-decoration: none; font-weight: bold;">${email}</a></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding-top: 15px; border-top: 1px solid #eee;">
+                  <strong style="color: #555;">Message:</strong>
+                  <div style="margin-top: 15px; padding: 20px; background: #f4f1ec; border-left: 4px solid #bc9c82; color: #333; line-height: 1.6; border-radius: 0 4px 4px 0;">
+                    ${message}
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <p style="font-size: 12px; color: #888; margin-top: 30px; text-align: center;">
+              Sent securely from your Mathyam Supriya AI Portfolio
+            </p>
+          </div>
+        `
       })
     });
 
