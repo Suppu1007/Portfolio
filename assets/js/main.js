@@ -9,16 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('/components/navbar.html', 'header-placeholder');
     loadComponent('/components/footer.html', 'footer-placeholder');
 
-    // Add slight fade-in animation to spreads
-    const elements = document.querySelectorAll('.spread');
-    elements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        setTimeout(() => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }, 100 * (index + 1));
+    // Intersection Observer for scroll-reveal animations
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1
+    });
+
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.add('reveal-hidden');
+        revealObserver.observe(section);
     });
 });
 

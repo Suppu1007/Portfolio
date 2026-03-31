@@ -6,21 +6,44 @@
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 10px 24px;
+    padding: 12px 30px;
     border: 1px solid var(--color-text-primary);
     background: transparent;
     color: var(--color-text-primary);
     font-family: var(--font-sans);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50px; /* Pill shape from pattern */
 }
 
 .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
     background: var(--color-text-primary);
-    color: var(--color-paper);
+    color: white;
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #a855f7 0%, #f97316 100%);
+    color: white;
+    border: none;
+}
+
+.btn-gradient:hover {
+    box-shadow: 0 15px 30px rgba(168, 85, 247, 0.3);
+}
+
+.btn-white {
+    background: white;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
 }
 
 /* Image blocks */
@@ -101,17 +124,82 @@
     max-width: 280px;
 }
 
-/* Cards (Project feature) */
-.project-card {
+/* Modern Card Pattern from Image */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.service-card:hover {
+    border-color: var(--color-accent);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.service-card .icon-wrap {
+    width: 60px;
+    height: 60px;
+    background: var(--color-paper);
+    border-radius: 12px;
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 
 .project-card .img-wrap {
+    position: relative;
     width: 100%;
-    aspect-ratio: 4/5;
-    background-color: var(--color-border);
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: var(--color-paper);
+}
+
+.project-card .content-wrap {
+    padding: var(--spacing-md);
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--color-paper);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 /* Form styling */

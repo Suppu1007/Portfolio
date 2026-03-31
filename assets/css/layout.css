@@ -5,50 +5,94 @@
 
 /* Main wrapper that centers the content */
 .portfolio-wrapper {
-    max-width: 1200px; /* Modern flowing width */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-lg);
-    display: flex;
-    flex-direction: column;
+    padding: 0 var(--spacing-md);
 }
 
-.spread {
-    display: flex;
-    flex-direction: row;
+.section {
+    padding: clamp(5rem, 12vw, 10rem) 0; /* Premium generous spacing */
     width: 100%;
+    scroll-margin-top: 100px; /* Offset for sticky navbar */
 }
 
-/* Individual page inside a spread */
+.container-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Content area within a section */
 .page {
-    flex: 1;
     position: relative;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
 }
 
-/* Add a line simulating binding between pages in a dual-spread */
-.spread .page + .page {
-    border-left: none;
+/* Navbar styling */
+.navbar {
+    position: sticky;
+    top: 20px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+    z-index: 1000;
+    border-radius: 100px; /* Pill shape */
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
-/* Navbar styling injected from components/navbar.html */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
+.nav-brand a {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+}
+
+.nav-links a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    color: var(--color-text-primary);
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+/* Scroll reveal classes */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer styling injected from components/footer.html */
@@ -72,30 +116,7 @@
     gap: var(--spacing-md);
 }
 
-/* Section specific layouts */
-/* Hero */
-.hero-spread {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-header {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-md);
-}
-
-.hero-image-wrap {
-    flex-grow: 1;
-    margin: var(--spacing-md) 0;
-    width: 100%;
-    min-height: 400px;
-}
-
-/* Grid splits within a page */
+/* Grid splits */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
