@@ -1,41 +1,32 @@
-/* 
-   assets/css/responsive.css
-   Media queries for responsiveness
-*/
-
-/* Modern Grid Responsiveness */
+/* Magazine Spread Responsiveness */
 @media (max-width: 1024px) {
-    .portfolio-wrapper {
-        padding: 0 var(--spacing-md);
-    }
-    
-    [style*="grid-template-columns: 1fr 1.5fr"],
-    [style*="grid-template-columns: 1.5fr 1fr"] {
-        grid-template-columns: 1fr !important;
-        gap: var(--spacing-lg) !important;
+    .spread {
+        flex-direction: column;
+        min-height: auto;
     }
 
-    .about-image-wrap {
-        max-width: 400px;
-        margin: 0 auto;
+    .page {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .page + .page {
+        border-left: none;
+        border-top: 1px solid var(--color-border);
     }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: var(--spacing-lg) 0;
-    }
-
-    [style*="grid-template-columns: repeat(3, 1fr)"] {
-        grid-template-columns: 1fr !important;
+        padding: 0; /* Sections are full-bleed spreads now */
     }
 
     h1 {
-        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        font-size: clamp(3rem, 15vw, 5rem);
+        line-height: 1;
     }
 
     h2 {
-        font-size: clamp(2rem, 6vw, 2.5rem);
+        font-size: 1.8rem;
     }
 
     .navbar {
@@ -53,19 +44,14 @@
         justify-content: center;
     }
 
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-profile-wrap img {
-        width: 100px !important;
-        height: 100px !important;
+    .hero-header {
+        font-size: 0.6rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-profile-wrap {
-        margin-top: 0 !important;
+    h1 {
+        font-size: 3.5rem;
     }
     
     .nav-links a {
