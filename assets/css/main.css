@@ -5,12 +5,12 @@
 
 :root {
     /* Color Palette derived from the provided image */
-    --color-bg-page: #d4cfc7;       /* The dark beige background of the full screen */
-    --color-paper: #f4f1ec;         /* The slightly warm white of the paper pages */
-    --color-text-primary: #111111;  /* Very dark grey/black for text */
+    --color-bg-page: #f9f8f6;       /* Elegant unified light beige background */
+    --color-paper: #f9f8f6;         /* Unified seamlessly */
+    --color-text-primary: #171717;  /* High contrast dark for text */
     --color-text-secondary: #555555;/* Subtle grey for smaller text */
     --color-accent: #bc9c82;        /* Subtle warm accent color */
-    --color-border: #dddddd;        /* Light grey for subtle borders */
+    --color-border: rgba(0,0,0,0.06); /* Very subtle borders */
     
     /* Typography */
     --font-serif: 'Playfair Display', serif;

@@ -3,14 +3,13 @@
    Grid, navbar, sections, page containers
 */
 
-/* Main wrapper that centers the "magazine" within the beige background */
+/* Main wrapper that centers the content */
 .portfolio-wrapper {
-    max-width: 1600px;
+    max-width: 1200px; /* Modern flowing width */
     margin: 0 auto;
-    padding: var(--spacing-lg);
+    padding: 0 var(--spacing-lg);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
 }
 
 .spread {
